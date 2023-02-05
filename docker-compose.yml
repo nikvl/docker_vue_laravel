@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 services:
 
   # Backend контейнер для php
@@ -23,7 +23,7 @@ services:
     build:
       context: .
       dockerfile: ./frontend/Dockerfile
-    restart: unless-stopped
+    restart: always
     tty: true
     working_dir: /var/www
     volumes:
